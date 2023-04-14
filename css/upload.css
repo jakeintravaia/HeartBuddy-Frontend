@@ -1,0 +1,42 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.container .hb-logo{
+  opacity: 0;
+  animation: fadeIn 500ms ease-in-out forwards;
+  animation-delay: 200ms;
+}
+
+.upload-file{
+  width: 700px;
+  height: 360px;
+  border: 2px solid var(--light-red);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--dark-red);
+  font-size: 20px;
+  opacity: 0;
+  animation: fadeInTop 500ms ease-in-out forwards;
+  animation-delay: 300ms;
+  cursor: pointer;
+}
+
+.submit-btn{
+    border: 0px;
+  height: 75px;
+  animation-delay: 400ms;
+  margin-top: 10px;
+}
+
+.disabled{
+    opacity: 0.5;
+    cursor: default;
+    pointer-events: none;
+}

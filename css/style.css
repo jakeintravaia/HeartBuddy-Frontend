@@ -1,0 +1,129 @@
+:root{
+  --dark-red: #E14747;
+  --light-red: #e39695;
+}
+
+body{
+  padding: 0;
+  margin: 0;
+  background: #ffffff;
+  font-family: Arial;
+  user-select: none;
+}
+
+.nav-bar{
+  display: flex;
+  padding: 0;
+  margin: 0;
+  height: 60px;
+  background: var(--dark-red);
+  align-items: center;
+}
+
+.nav-bar .nav-logo {
+  margin-left: 10px;
+  cursor: pointer;
+  animation: fadeInSlideLeft 500ms ease-in-out forwards;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.container .hb-logo{
+  opacity: 0;
+  animation: fadeIn 500ms ease-in-out forwards;
+  animation-delay: 200ms;
+}
+
+.button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 33%;
+  height: 100px;
+  background: var(--dark-red);
+  color: white;
+  font-size: 25px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 100ms ease-in-out;
+  transform: scale(0);
+  animation: popIn 300ms ease-in-out forwards;
+}
+
+.button:hover{
+  background: var(--light-red);
+  transform: scale(1.05);
+}
+
+a{
+  text-decoration: none;
+  color: white;
+  display: contents;
+}
+
+@keyframes fadeIn{
+  0%
+  {
+    opacity: 0;
+  }
+
+  100%
+  {
+    opacity: 1;
+  }
+}
+
+
+@keyframes fadeInSlideLeft{
+  0%
+  {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+
+  100%
+  {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes popIn{
+  0%
+  {
+    transform: scale(0);
+  }
+
+  90%
+  {
+    transform: scale(1.05);
+  }
+
+  100%
+  {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInTop{
+  0%
+  {
+    display: flex;
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100%
+  {
+    display: flex;
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}

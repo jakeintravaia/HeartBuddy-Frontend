@@ -1,0 +1,35 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.container .hb-logo{
+  opacity: 0;
+  animation: fadeIn 500ms ease-in-out forwards;
+  animation-delay: 200ms;
+}
+
+.container .hb-logo img{
+  width: 150px;
+}
+
+.tos-container{
+  width: 33%;
+  height: 500px;
+  overflow-y: scroll;
+  padding: 20px;
+  border: 2px solid var(--light-red);
+  border-radius: 10px;
+  opacity: 0;
+  animation: fadeIn 500ms ease-in-out forwards;
+  animation-delay: 400ms;
+}
+
+.home{
+  animation-delay: 500ms;
+  margin-top: 15px;
+  height: 50px;
+}

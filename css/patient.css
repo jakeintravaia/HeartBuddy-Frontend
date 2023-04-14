@@ -1,0 +1,46 @@
+.container .hb-logo img{
+  width: 200px;
+}
+
+.form{
+  display: flex;
+  width: 500px;
+  height: 500px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  border: 2px solid var(--light-red);
+  border-radius: 10px;
+}
+
+label{
+  color: var(--dark-red);
+  font-size: 20px;
+  margin: 10px;
+}
+
+input{
+  width: 90%;
+  height: 50px;
+  outline: none;
+  margin-bottom: 20px;
+  border: 1px solid var(--light-red);
+  padding-left: 10px;
+}
+
+.submit{
+  border: none;
+  height: 50px;
+  width: 90%;
+}
+
+.disabled {
+    opacity: 0.5;
+    cursor: default;
+    pointer-events: none;
+}
+
+.incorrect{
+    border: 2px solid red;
+}

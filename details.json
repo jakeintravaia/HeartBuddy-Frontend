@@ -1,0 +1,75 @@
+{
+  "AFIB": {
+    "name": "Atrial Fibrillation",
+    "description": "Atrial fibrillation, often called AFib or AF, is the most common type of treated heart arrhythmia. An arrhythmia is when the heart beats too slowly, too fast, or in an irregular way. When a person has AFib, the normal beating in the upper chambers of the heart (the two atria) is irregular, and blood doesn't flow as well as it should from the atria to the lower chambers of the heart (the two ventricles). AFib may happen in brief episodes, or it may be a permanent condition.",
+    "symptoms": [
+      "Irregular Heartbeat",
+      "Heart palpitations",
+      "Lightheadedness",
+      "Extreme fatigue",
+      "Shortness of breath",
+      "Chest pain"
+    ],
+    "source": "https://www.heart.org/en/health-topics/atrial-fibrillation/what-is-atrial-fibrillation-afib-or-af"
+  },
+  "AF": {
+    "name": "Atrial Flutter",
+    "description": "Atrial flutter is a type of abnormal heart rhythm, or arrhythmia. It occurs when a short circuit in the heart causes the upper chambers (atria) to pump very rapidly. Atrial flutter is important not only because of its symptoms but because it can cause a stroke that may result in permanent disability or death.",
+    "symptoms": [
+      "Stroke",
+      "Heart palpitations",
+      "Dizziness or fainting",
+      "Shortness of breath",
+      "Fatigue"
+    ],
+    "source": "https://www.heart.org/en/health-topics/atrial-fibrillation/what-is-atrial-fibrillation-afib-or-af/atrial-flutter"
+  },
+  "AVB": {
+    "name": "1st Degree Atrioventricular Block",
+    "description": "First-degree atrioventricular (AV) block is a condition of abnormally slow conduction through the AV node. It is defined by ECG changes that include a PR interval of greater than 0.20 without disruption of atrial to ventricular conduction. This condition is generally asymptomatic and discovered only on routine ECG.",
+    "symptoms": [ "Typically, patients are asymptomatic." ],
+    "source": "https://www.ncbi.nlm.nih.gov/books/NBK448164/"
+  },
+  "CRBBB": {
+    "name": "Complete Right Bundle Branch Block",
+    "description": "Bundle branch block is a condition in which there's a delay or blockage along the pathway that electrical impulses travel to make the heart beat. It sometimes makes it harder for the heart to pump blood to the rest of the body. The delay or blockage can occur on the pathway that sends electrical impulses either to the left or the right side of the bottom chambers (ventricles) of the heart.",
+    "symptoms": [ "In most people, bundle branch block doesn't cause symptoms.", "Syncope (Rare)", "Presyncope (Rare)" ],
+    "source": "https://www.mayoclinic.org/diseases-conditions/bundle-branch-block/symptoms-causes/syc-20370514"
+  },
+  "LVH": {
+    "name": "Left Ventricular Hypertrophy",
+    "description": "Left ventricular hypertrophy (LVH) means that the muscle of the heart's main pump (left ventricle) has become thick and enlarged. This can happen over time if the left ventricle has to work too hard. This part of the heart needs to be strong to pump oxygen-rich blood to your entire body. When the ventricle gets thick, other changes can happen in the heart. The heart's electrical system might not work normally, the heart muscle may not get enough oxygen, and the heart may not pump as well as it should.",
+    "symptoms": [ "Shortness of breath.", "Feeling tired or dizzy.", "Angina symptoms, such as chest pain or pressure, which may be worse when you're active.", "Feeling like your heart is fluttering, racing, or pounding (palpitations)." ],
+    "source": "https://myhealth.alberta.ca/Health/aftercareinformation/pages/conditions.aspx?hwid=abr9384&#:~:text=Left%20ventricular%20hypertrophy%20(LVH)%20means,blood%20to%20your%20entire%20body."
+  },
+  "SA": {
+    "name": "Sinus Arrhythmia",
+    "description": "Sinus arrhythmia is a variation of normal sinus rhythm that characteristically presents with an irregular rate in which the change in the R-R interval is greater than 0.12 seconds. Additionally, the P waves are typically monoform and in a pattern consistent with atrial activation originating from the sinus node. During respiration, intermittent vagus nerve activation occurs, which results in beat-to-beat variations in the resting heart rate. When present, sinus arrhythmia typically indicates good cardiovascular health.",
+    "symptoms": [ "None" ],
+    "source": "https://www.ncbi.nlm.nih.gov/books/NBK537011/"
+  },
+  "SB": {
+    "name": "Sinus Bradycardia",
+    "description": "Sinus bradycardia is a cardiac rhythm with appropriate cardiac muscular depolarization initiating from the sinus node and a rate of fewer than 60 beats per minute (bpm). The diagnosis of this condition requires an ECG showing a normal sinus rhythm at a rate lower than 60 bpm.",
+    "symptoms": [ "Fatigue", "Lightheadedness", "Dizziness", "Exercise intolerance", "Syncope or Presyncope", "Worsening of anginal symptoms", "Worsening of heart failure", "Cognitive slowing" ],
+    "source": "https://www.ncbi.nlm.nih.gov/books/NBK493201/#:~:text=Sinus%20bradycardia%20is%20a%20cardiac,rate%20lower%20than%2060%20bpm."
+  },
+  "SR": {
+    "name": "Sinus Rhythm",
+    "description": "Normal sinus rhythm (NSR) is the rhythm that originates from the sinus node and describes the characteristic rhythm of the healthy human heart.",
+    "symptoms": [ "None" ],
+    "source": "https://www.uptodate.com/contents/normal-sinus-rhythm-and-sinus-arrhythmia"
+  },
+  "ST": {
+    "name": "Sinus Tachycardia",
+    "description": "Sinus tachycardia is a type of irregular heartbeat that is characterized by a faster than normal heart rhythm. Your heart’s sinus node generates electrical impulses that travel through the heart muscle, causing it to beat. A normal sinus rhythm has a heart rate of between 60 and 100 beats/minute.",
+    "symptoms": [ "A rapid heartbeat that is uncomfortable", "Shortness of breath", "Dizziness or fainting", "Chest pain", "Inability or decreased ability to exercise", "Headaches", "Feeling anxious" ],
+    "source": "https://www.mercy.com/health-care-services/heart-vascular/conditions/sinus-tachycardia"
+  },
+  "STTC": {
+    "name": "ST-T Change",
+    "description": "Nonspecific ST-T-wave changes are very common and may be seen in any lead of the electrocardiogram. The changes may be seen in all or most of the leads (diffuse changes), or they may be present contiguous leads, such as the inferior, lateral, or anterior leads.",
+    "symptoms": [ "Dependent on context" ],
+    "source": "https://www.uptodate.com/contents/ecg-tutorial-st-and-t-wave-changes#:~:text=Dardas%2C%20MD%2C%20MS-,INTRODUCTION,similar%20findings%20on%20prior%20electrocardiograms."
+  }
+}

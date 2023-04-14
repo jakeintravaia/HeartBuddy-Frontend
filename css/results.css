@@ -1,0 +1,197 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.container .hb-logo img{
+  width: 200px;
+  height: 200px;
+}
+
+.container .hb-logo{
+  opacity: 0;
+  animation: fadeIn 500ms ease-in-out forwards;
+  animation-delay: 200ms;
+}
+
+.results-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.feature-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: var(--dark-red);
+  margin: 20px;
+  opacity: 0;
+  animation: fadeIn 500ms ease-in-out forwards;
+  animation-delay: 500ms;
+}
+
+.feature-container img{
+  margin-top: 10px;
+}
+
+.rslt-tbl, .result {
+    box-sizing: border-box; /* Add this to both parent and child elements */
+}
+
+.rslt-tbl{
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 600px;
+  height: 500px;
+  border: 2px solid var(--light-red);
+  border-radius: 10px;
+  overflow-y: auto;
+  animation: popIn 500ms ease-in-out forwards;
+}
+
+.result{
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+  height: 100px; 
+  min-height: 100px;
+  border: 2px solid var(--light-red);
+  border-radius: 10px;
+  margin: 10px;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--dark-red);
+  font-size: 20px;
+  opacity: 0;
+  animation-name: fadeInTop;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+  transition: all 100ms ease-in-out;
+}
+
+.result:hover{
+    border: 3px solid var(--light-red);
+}
+
+.abnorm {
+  margin-left: 10px;
+}
+
+.confidence {
+  margin-right: 10px;
+}
+
+.download{
+  animation-delay: 400ms;
+  height: 50px;
+  margin-top: 20px;
+}
+
+.block-out {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: 100;
+    opacity: 0.3;
+}
+
+.pop-up {
+    width: 900px;
+    height: 500px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 101;
+}
+
+.pop-up .title{
+    height: 75px;
+    width: 100%;
+    background: var(--dark-red);
+    text-align: center;
+    line-height: 75px;
+    font-size: 35px;
+    color: white;
+    padding: 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.pop-body {
+    background: white;
+    width: 100%;
+    height: 400px;
+    padding: 10px;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+    overflow-y: scroll;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.pop-body::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--light-red);
+}
+
+.pop-body .title{
+    background: var(--dark-red);
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    padding: 0;
+}
+
+.pop-up .exit{
+    position: relative;
+    top: 15px;
+    right: 5px;
+    float: right;
+    font-size: 25px;
+    cursor: pointer;
+    color: white;
+}
+
+.pop-up h1{
+    color: var(--light-red);
+}
+
+.pop-up ul {
+    list-style: none;
+    list-style-type: "\2665";
+    margin: 0;
+    padding-left: 10px;
+}
+
+.pop-up ul li{
+    padding-left: 10px;
+}
+
+.pop-up ul li::marker {
+    color: var(--dark-red);
+}
+
+.pop-up a{
+    color: var(--light-red);
+    font-size: 20px;
+}
