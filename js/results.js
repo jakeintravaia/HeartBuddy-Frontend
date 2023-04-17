@@ -1,7 +1,7 @@
 var keys = [];
 var vals = [];
 var delay = 300;
-var threshold = 0.01;
+var threshold = 0;
 
 var names = {
     "AF": "Atrial Flutter",
@@ -24,8 +24,8 @@ $(document).ready(function () {
         console.log(result);
         var items = [];
         for (var i = 0; i < result.length; i++) {
-            if (result[i][1].predict_tensor_l > threshold) {
-                items.push("<div class='result' id='" + result[i][1].acronym + "'><div class='abnorm'>" + result[i][1].name + "</div><div class='confidence'>" + (result[i][1].predict_tensor_l * 100).toFixed(2) + "%</div></div>");
+            if (result[i][1].predict_tensor_r > threshold) {
+                items.push("<div class='result' id='" + result[i][1].acronym + "'><div class='abnorm'>" + result[i][1].name + "</div><div class='confidence'>" + (result[i][1].predict_tensor_r * 100).toFixed(2) + "%</div></div>");
             }
         }
         for (i = 0; i < items.length; i++) {
@@ -38,7 +38,7 @@ $(document).ready(function () {
         });
     }
     var parsed_rslts = JSON.parse(results);
-    var sorted_rslts = Object.entries(parsed_rslts).sort((a, b) => b[1].predict_tensor_l - a[1].predict_tensor_l);
+    var sorted_rslts = Object.entries(parsed_rslts).sort((a, b) => b[1].predict_tensor_r - a[1].predict_tensor_r);
     console.log(sorted_rslts);
     addResults(sorted_rslts);
 
