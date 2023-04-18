@@ -28,14 +28,20 @@ $(document).ready(function () {
             $(".submit-btn").addClass("disabled");
         } else {
             $(".upload-file").html("File selected: " + fileName);
-            $(".submit-btn").removeClass("disabled");
-            $(".submit-btn").removeAttr("disabled");
+            var file = $("#npy-upload").prop('files')[0];
+            getBase64(file); // prints the base64 string
+            setInterval(checkPayload, 500);
         }
     });
 
+    function checkPayload() {
+        if (localStorage.getItem("encoded_file") != null) {
+            $(".submit-btn").removeClass("disabled");
+            $(".submit-btn").removeAttr("disabled");
+        }
+    }
+
     $(".submit-btn").on("click", function () {
-        var file = $("#npy-upload").prop('files')[0];
-        getBase64(file); // prints the base64 string
         window.location.href = "patient.html";
     });
 });

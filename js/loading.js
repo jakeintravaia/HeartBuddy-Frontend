@@ -24,9 +24,10 @@ $(document).ready(function () {
     }).then(response => response.json()
     ).then(data => {
         console.log(data);
-        var model_results = data.result.predictions;
-        var features = data.result.fex_image;
-        var full_results = data.result;
+        var model_results = data.predictions.result;
+        var features = data.feature_extraction.result;
+        var full_results = data;
+        
         localStorage.setItem("features", features); // Our FE images
         localStorage.setItem("model_results", JSON.stringify(model_results)); // Our model predictions
         localStorage.setItem("full_results", JSON.stringify(full_results)); // Our full results
