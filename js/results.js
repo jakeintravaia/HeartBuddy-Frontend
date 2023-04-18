@@ -18,9 +18,10 @@ var names = {
 
 var results = localStorage.getItem("model_results");
 var features = localStorage.getItem("features");
+var full_results = localStorage.getItem("full_results");
 
 $(document).ready(function () {
-
+    console.log(full_results);
     function addResults(result) {
         console.log(result);
         var image = new Image();
@@ -67,9 +68,17 @@ $(document).ready(function () {
     
 
     $(".download").on("click", function () {
-        // Do something
+        console.log("Attempting download.");
+        var data = "text/json;charset=utf-8," + encodeURIComponent(full_results);
+        $(this).attr("href", "data:" + data);
+        $(this).attr("download", "hb-results.json");
     });
 });
+
+function exportJson(el) {
+
+    
+}
 
 
 

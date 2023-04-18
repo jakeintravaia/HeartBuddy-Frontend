@@ -26,8 +26,10 @@ $(document).ready(function () {
         console.log(data);
         var model_results = data.result.predictions;
         var features = data.result.fex_image;
+        var full_results = data.result;
         localStorage.setItem("features", features); // Our FE images
         localStorage.setItem("model_results", JSON.stringify(model_results)); // Our model predictions
+        localStorage.setItem("full_results", JSON.stringify(full_results)); // Our full results
         window.location.href = "results.html";
     })
         .catch(error => {
