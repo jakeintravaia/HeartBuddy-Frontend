@@ -31,8 +31,8 @@ input{
 
 .submit{
   border: none;
-  height: 50px;
-  width: 90%;
+  height: 50px !important;
+  width: 90% !important;
 }
 
 .disabled {
