@@ -25,15 +25,14 @@ $(document).ready(function () {
     ).then(data => {
         console.log(data);
         var model_results = data.predictions.result;
-        var features = data.feature_extraction.result;
+        var feature_extraction = data.feature_extraction;
         var full_results = data;
-        
-        localStorage.setItem("features", features); // Our FE images
+        localStorage.setItem("feature_extraction", JSON.stringify(feature_extraction)); // Our FE images
         localStorage.setItem("model_results", JSON.stringify(model_results)); // Our model predictions
         localStorage.setItem("full_results", JSON.stringify(full_results)); // Our full results
         window.location.href = "results.html";
     })
         .catch(error => {
-            window.location.href = "error.html";
+            window.location.href = "results.html";
         });
 });

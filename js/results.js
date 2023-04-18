@@ -17,16 +17,13 @@ var names = {
 };
 
 var results = localStorage.getItem("model_results");
-var features = localStorage.getItem("features");
+var feature_extraction = localStorage.getItem("feature_extraction");
 var full_results = localStorage.getItem("full_results");
 
 $(document).ready(function () {
     console.log(full_results);
     function addResults(result) {
         console.log(result);
-        var image = new Image();
-        image.src = 'data:image/png;base64,'.concat(features);
-        $(".feature-container").append(image);
         var items = [];
         for (var i = 0; i < result.length; i++) {
             if (result[i][1].predict_tensor_r > threshold) {
@@ -42,10 +39,24 @@ $(document).ready(function () {
             delay += 100; // increase delay by 100ms for each div
         });
     }
+
+    function addFeatures() {
+        var features = JSON.parse(feature_extraction);
+        console.log(features);
+        if (features.success == true) {
+            var image = new Image();
+            image.src = 'data:image/png;base64,'.concat(features.result);
+            $(".feature-container").append(image);
+        } else {
+            $(".feature-container").html("Error: Feature extraction failed.");
+        }
+    }
+
     var parsed_rslts = JSON.parse(results);
     var sorted_rslts = Object.entries(parsed_rslts).sort((a, b) => b[1].predict_tensor_r - a[1].predict_tensor_r);
     console.log(sorted_rslts);
     addResults(sorted_rslts);
+    addFeatures();
 
     $(document).on("click", ".result", function () {
         var cond = $(this).attr('id');
