@@ -23,7 +23,7 @@ $(document).ready(function () {
     $(".file-input").change(function () {
         var fileName = $(".file-input").val().split('\\').pop();
         var extension = fileName.split(".");
-        if (extension[1] !== "npy") {
+        if (extension.slice(-1)[0] !== "npy") {
             $(".upload-file").html("Error: Only .npy files are supported.");
             $(".submit-btn").addClass("disabled");
         } else {

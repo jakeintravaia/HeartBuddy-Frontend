@@ -71,7 +71,7 @@ $(document).ready(function () {
         console.log("Attempting download.");
         var data = "text/json;charset=utf-8," + encodeURIComponent(full_results);
         $(this).attr("href", "data:" + data);
-        $(this).attr("download", "hb-results.json");
+        $(this).attr("download", "results.hb");
     });
 });
 

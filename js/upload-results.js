@@ -7,8 +7,8 @@ $(document).ready(function () {
     $(".file-input").change(function () {
         var fileName = $(".file-input").val().split('\\').pop();
         var extension = fileName.split(".");
-        if (extension[1] !== "json") {
-            $(".upload-file").html("Error: Only .json files are supported.");
+        if (extension.slice(-1)[0] !== "hb") {
+            $(".upload-file").html("Error: Only .hb files are supported.");
             $(".submit-btn").addClass("disabled");
         } else {
             $(".upload-file").html("File selected: " + fileName);
