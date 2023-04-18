@@ -30,7 +30,7 @@ $(document).ready(function () {
             var model_results = results.predictions.result;
             var feature_extraction = results.feature_extraction;
             var full_results = results;
-            localStorage.setItem("feature_extraction", feature_extraction); // Our FE images
+            localStorage.setItem("feature_extraction", JSON.stringify(feature_extraction)); // Our FE images
             localStorage.setItem("model_results", JSON.stringify(model_results)); // Our model predictions
             localStorage.setItem("full_results", JSON.stringify(full_results)); // Our full results
             window.location.href = "results.html";
