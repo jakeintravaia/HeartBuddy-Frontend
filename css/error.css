@@ -1,0 +1,44 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: #ffffff;
+    font-family: Arial;
+}
+
+.nav-bar {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    height: 60px;
+    background: var(--dark-red);
+    align-items: center;
+}
+
+    .nav-bar .nav-logo {
+        margin-left: 10px;
+        cursor: pointer;
+        animation: fadeInSlideLeft 500ms ease-in-out forwards;
+    }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+    .container .hb-logo {
+        opacity: 0;
+        animation: fadeIn 500ms ease-in-out forwards;
+        animation-delay: 200ms;
+    }
+
+h1{
+    color: var(--light-red);
+}
+
+.button {
+    width: 500px !important;
+    height: 50px !important;
+}

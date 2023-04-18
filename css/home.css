@@ -1,6 +1,7 @@
-:root{
-  --dark-red: #E14747;
-  --light-red: #e39695;
+:root {
+    --dark-red: #E14747;
+    --light-red: #e39695;
+    font-family: 'Roboto', sans-serif;
 }
 
 body{

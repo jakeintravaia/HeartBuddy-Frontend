@@ -16,12 +16,16 @@ var names = {
     "STTC": "ST-T Change"
 };
 
-var results = localStorage.getItem("result");
+var results = localStorage.getItem("model_results");
+var features = localStorage.getItem("features");
 
 $(document).ready(function () {
 
     function addResults(result) {
         console.log(result);
+        var image = new Image();
+        image.src = 'data:image/png;base64,'.concat(features);
+        $(".feature-container").append(image);
         var items = [];
         for (var i = 0; i < result.length; i++) {
             if (result[i][1].predict_tensor_r > threshold) {

@@ -24,12 +24,13 @@ $(document).ready(function () {
     }).then(response => response.json()
     ).then(data => {
         console.log(data);
-        result = data.result;
-        console.log(result);
-        localStorage.setItem("result", JSON.stringify(result));
+        var model_results = data.result.predictions;
+        var features = data.result.fex_image;
+        localStorage.setItem("features", features); // Our FE images
+        localStorage.setItem("model_results", JSON.stringify(model_results)); // Our model predictions
         window.location.href = "results.html";
     })
         .catch(error => {
-            // Redirect to error page
+            window.location.href = "error.html";
         });
 });
