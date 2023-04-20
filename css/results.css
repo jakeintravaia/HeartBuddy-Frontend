@@ -80,7 +80,7 @@ body {
   margin: 10px;
   justify-content: space-between;
   align-items: center;
-  color: var(--dark-red);
+  color: white;
   font-size: 20px;
   opacity: 0;
   animation-name: fadeInTop;
@@ -93,6 +93,7 @@ body {
 
 .result:hover{
     border: 3px solid var(--light-red);
+    opacity: 0.8 !important;
 }
 
 .abnorm {

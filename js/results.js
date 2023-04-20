@@ -20,6 +20,57 @@ var results = localStorage.getItem("model_results");
 var feature_extraction = localStorage.getItem("feature_extraction");
 var full_results = localStorage.getItem("full_results");
 
+const color_schemes = ["#E14747", "#fd9644", "#f7b731", "#20bf6b"];
+
+function createResult(acronym, name, prediction) {
+    this.root = $("<div>");
+    this.abnorm = $("<div>");
+    this.confidence = $("<div>");
+
+    // Add classes/IDs
+    this.root.addClass("result");
+    this.root.attr("id", acronym);
+
+    this.abnorm.addClass("abnorm");
+    this.confidence.addClass("confidence");
+
+    // Add HTML content
+    this.abnorm.html(name);
+    this.confidence.html((prediction * 100).toFixed(2) + "%");
+
+    // Put things together
+    this.root.append(this.abnorm);
+    this.root.append(this.confidence);
+
+    if (prediction >= 0.75) {
+        this.root.css({
+            borderColor: color_schemes[0],
+            //color: color_schemes[0]
+            background: color_schemes[0]
+        });
+    } else if (prediction >= 0.5 && prediction < 0.75) {
+        this.root.css({
+            borderColor: color_schemes[1],
+            //color: color_schemes[0]
+            background: color_schemes[1]
+        });
+    } else if (prediction >= 0.25 && prediction < 0.5) {
+        this.root.css({
+            borderColor: color_schemes[2],
+            //color: color_schemes[0]
+            background: color_schemes[2]
+        });
+    } else if (prediction >= 0 && prediction < 0.25) {
+        this.root.css({
+            borderColor: color_schemes[3],
+            //color: color_schemes[0]
+            background: color_schemes[3]
+        });
+    }
+
+    return this.root;
+}
+
 $(document).ready(function () {
     console.log(full_results);
     function addResults(result) {
@@ -27,7 +78,7 @@ $(document).ready(function () {
         var items = [];
         for (var i = 0; i < result.length; i++) {
             if (result[i][1].predict_tensor_r > threshold) {
-                items.push("<div class='result' id='" + result[i][1].acronym + "'><div class='abnorm'>" + result[i][1].name + "</div><div class='confidence'>" + (result[i][1].predict_tensor_r * 100).toFixed(2) + "%</div></div>");
+                items.push(createResult(result[i][1].acronym, result[i][1].name, result[i][1].predict_tensor_r));
             }
         }
         for (i = 0; i < items.length; i++) {
