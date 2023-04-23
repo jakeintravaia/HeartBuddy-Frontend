@@ -26,6 +26,8 @@ function createResult(acronym, name, prediction) {
     this.root = $("<div>");
     this.abnorm = $("<div>");
     this.confidence = $("<div>");
+    // jquery
+
 
     // Add classes/IDs
     this.root.addClass("result");
@@ -41,7 +43,7 @@ function createResult(acronym, name, prediction) {
     // Put things together
     this.root.append(this.abnorm);
     this.root.append(this.confidence);
-
+    
     if (prediction >= 0.75) {
         this.root.css({
             borderColor: color_schemes[0],

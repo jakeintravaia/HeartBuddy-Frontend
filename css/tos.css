@@ -17,8 +17,8 @@
 }
 
 .tos-container{
-  width: 33%;
-  height: 500px;
+  width: 66%;
+  height: 300px;
   overflow-y: scroll;
   padding: 20px;
   border: 2px solid var(--light-red);
@@ -31,7 +31,7 @@
 .home{
   animation-delay: 500ms;
   margin-top: 15px;
-  height: 50px;
+  height: 50px !important;
 }
 
 li{

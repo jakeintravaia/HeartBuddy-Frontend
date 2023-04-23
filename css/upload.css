@@ -3,18 +3,20 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 .container .hb-logo{
   opacity: 0;
   animation: fadeIn 500ms ease-in-out forwards;
   animation-delay: 200ms;
+  width: 100px;
+  height: 100px;
 }
 
 .upload-file{
-  width: 700px;
-  height: 360px;
+  width: 600px;
+  height: 300px;
   border: 2px solid var(--light-red);
   border-radius: 10px;
   display: flex;
