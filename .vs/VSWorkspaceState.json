@@ -3,8 +3,9 @@
     "",
     "\\assets",
     "\\css",
+    "\\dependencies",
     "\\js"
   ],
-  "SelectedNode": "\\css\\style.css",
+  "SelectedNode": "\\css\\error.css",
   "PreviewInSolutionExplorer": false
 }
