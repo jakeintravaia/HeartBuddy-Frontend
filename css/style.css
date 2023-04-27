@@ -149,3 +149,9 @@ footer a{
     opacity: 1;
   }
 }
+
+@keyframes circleFill {
+    0% {
+        stroke-dasharray: 0, 100;
+    }
+}

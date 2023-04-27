@@ -22,6 +22,14 @@ var full_results = localStorage.getItem("full_results");
 
 const color_schemes = ["#E14747", "#fd9644", "#f7b731", "#20bf6b"];
 
+function makeCircle(color, width, percentage) {
+    this.root = $('<div>');
+    this.root.addClass('per-circle');
+    this.svg = $('<svg viewBox="0 0 36 36">  <path    d="M18 2.0845      a 15.9155 15.9155 0 0 1 0 31.831      a 15.9155 15.9155 0 0 1 0 -31.831"    fill="none"    stroke="#fff";    stroke-width="2";    stroke-dasharray="' + percentage + ', 100"  /><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">' + percentage + '%</text>');
+    this.root.append(this.svg);
+    return this.root;
+}
+
 function createResult(acronym, name, prediction) {
     this.root = $("<div>");
     this.abnorm = $("<div>");
