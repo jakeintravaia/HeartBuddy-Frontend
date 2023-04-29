@@ -1,4 +1,6 @@
 $(document).ready(function () {
+    var serverIp = localStorage.getItem("serverIp");
+    var serverPort = localStorage.getItem("serverPort");
     var age = localStorage.getItem("age");
     var height = localStorage.getItem("height");
     var weight = localStorage.getItem("weight");
@@ -12,9 +14,15 @@ $(document).ready(function () {
         "payload_b64": payload
     };
 
-    console.log(actual_data);
+    var server_str = "";
 
-    fetch('http://10.103.8.110:7463/upload', {
+    if (serverIp != null && serverPort != null) {
+        server_str = "http://" + serverIp + ":" + serverPort + "/upload";
+    } else {
+        server_str = "http://10.103.8.110:7463/upload";
+    }
+
+    fetch(server_str, {
         method: 'POST',
         headers: {
             "Accept": 'application/json',

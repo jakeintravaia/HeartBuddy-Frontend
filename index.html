@@ -6,28 +6,41 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="assets/favicon/site.webmanifest">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <title>HeartBuddy</title>
 </head>
-  <body>
-
+<body>
+    <div class="block-out"></div>
     <!-- Nav bar -->
     <div class="nav-bar">
-      <div class="nav-logo"><img src="assets/nav-logo.png" height="35px"></div></div>
+        <div class="nav-logo">
+        <img src="assets/nav-logo.png" height="35px">
+        </div>
+        <img class="config" src="assets/cog-icon.png"></img>
+    </div>
     </div>
 
     <!-- Main container -->
     <!-- This section of code is missing hrefs to separate pages -->
 
     <div class="container">
-      <div class="hb-logo"><img src="assets/hb-logo.png"></img></div>
-      <a href="upload.html"><div class="upload button">Upload ECG File</div></a>
-      <a href="upload-results.html"><div class="view-results button">View Results</div></a>
-      <a href="tos.html"><div class="tos-agreement button">TOS Agreement</div></a>
+        <div class="hb-logo"><img src="assets/hb-logo.png"></img></div>
+        <a href="upload.html"><div class="upload button">Upload ECG File</div></a>
+        <a href="upload-results.html"><div class="view-results button">View Results</div></a>
+        <a href="tos.html"><div class="tos-agreement button">TOS Agreement</div></a>
     </div>
-  </body>
-  <footer> <small>&copy; Copyright 2023, HeartBuddy. By using this software you agree to the <a href="tos.html">terms and conditions</a>.</small></footer>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <div class="config-page">
+        <div class="config-title">Configuration<div class="exit">X</div></div>
+        <div class="config-body">
+            <input class="server-ip" type="text" placeholder="Server IP" />
+            <input class="server-port" type="number" placeholder="Server Port"/>
+            <div class="config-submit button" >Submit</div>
+        </div>
+    </div>
+</body>
+<footer> <small>&copy; Copyright 2023, HeartBuddy. By using this software you agree to the <a href="tos.html">terms and conditions</a>.</small></footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="js/index.js"></script>
 </html>

@@ -15,7 +15,6 @@ function getBase64(file) {
 }
 
 $(document).ready(function () {
-    localStorage.clear(); // Clear any previously stored data
     $(".upload-file").on("click", function () {
         $(".file-input").trigger("click");
     });
