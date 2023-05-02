@@ -17,9 +17,9 @@ $(document).ready(function () {
     var server_str = "";
 
     if (serverIp != null && serverPort != null) {
-        server_str = "http://" + serverIp + ":" + serverPort + "/upload";
+        server_str = "https://" + serverIp + ":" + serverPort + "/upload";
     } else {
-        server_str = "http://10.103.8.110:7463/upload";
+        server_str = "https://10.103.8.110:443/upload";
     }
 
     fetch(server_str, {
