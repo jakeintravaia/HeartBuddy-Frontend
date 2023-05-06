@@ -10,6 +10,22 @@ $(document).ready(function () {
         $('.config-body').css("display", "flex");
     });
 
+    $(".config-body .https").on("click", function () {
+        $(".highlight").css({
+            left: "auto",
+            right: "0px"
+        });
+        localStorage.setItem("protocol", "https");
+    });
+
+    $(".config-body .http").on("click", function () {
+        $(".highlight").css({
+            right: "auto",
+            left: "0px"
+        });
+        localStorage.setItem("protocol", "http");
+    });
+
     $(".config-title .exit").on("click", function () {
         $(".block-out").fadeOut();
         $('.config-page').fadeOut();

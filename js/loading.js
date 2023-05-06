@@ -1,6 +1,7 @@
 $(document).ready(function () {
     var serverIp = localStorage.getItem("serverIp");
     var serverPort = localStorage.getItem("serverPort");
+    var protocol = localStorage.getItem("protocol");
     var age = localStorage.getItem("age");
     var height = localStorage.getItem("height");
     var weight = localStorage.getItem("weight");
@@ -16,10 +17,10 @@ $(document).ready(function () {
 
     var server_str = "";
 
-    if (serverIp != null && serverPort != null) {
-        server_str = "https://" + serverIp + ":" + serverPort + "/upload";
+    if (serverIp != null && serverPort != null && protocol != null) {
+        server_str = protocol + "://" + serverIp + ":" + serverPort + "/upload";
     } else {
-        server_str = "https://10.103.8.110:443/upload";
+        server_str = "https://10.103.8.110:443/upload"; // Hardcoded default server
     }
 
     fetch(server_str, {
@@ -41,6 +42,6 @@ $(document).ready(function () {
         window.location.href = "results.html";
     })
         .catch(error => {
-            window.location.href = "error.html";
+            //window.location.href = "error.html";
         });
 });
